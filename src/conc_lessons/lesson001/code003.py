@@ -2,7 +2,7 @@ import resource
 import time
 from concurrent.futures import (
     Future,
-    InterpreterPoolExecutor,  # paralelismo com interpretadores
+    # InterpreterPoolExecutor,  # paralelismo com interpretadores
     ProcessPoolExecutor,  # paralelismo com processos
     ThreadPoolExecutor,  # paralelismo com threads
     as_completed,
@@ -89,8 +89,8 @@ if __name__ == "__main__":
     print()
     run_procs("Processes")
     print()
-    run_interpreters("Interpreters")
-    print()
+    # run_interpreters("Interpreters")
+    # print()
 
     after = resource.getrusage(resource.RUSAGE_SELF)
     print("voluntary:", after.ru_nvcsw - before.ru_nvcsw)

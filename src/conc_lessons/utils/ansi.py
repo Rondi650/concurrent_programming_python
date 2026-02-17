@@ -6,7 +6,7 @@
 import re
 import shutil
 import unicodedata
-from typing import TYPE_CHECKING, Literal
+from typing import TYPE_CHECKING, Literal, Sequence  
 
 from conc_lessons.utils.system_random import sysrand
 

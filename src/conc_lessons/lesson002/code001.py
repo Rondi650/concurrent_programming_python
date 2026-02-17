@@ -1,5 +1,12 @@
 # Um exemplo de código síncrono que você já conhece bem
+from pathlib import Path
 import time
+import sys
+
+# Adiciona o diretório 'src' ao sys.path
+src_path = Path(__file__).parent.parent.parent
+print(src_path)
+sys.path.insert(0, str(src_path))
 
 from conc_lessons.utils.ansi import Ansi
 from conc_lessons.utils.base import (

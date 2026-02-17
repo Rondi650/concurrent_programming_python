@@ -1,6 +1,14 @@
 import threading
 import time
 
+import sys
+from pathlib import Path
+
+# Adiciona o diretório 'src' ao sys.path
+src_path = Path(__file__).parent.parent.parent
+print(src_path)
+sys.path.insert(0, str(src_path))
+
 from conc_lessons.utils.ansi import Ansi
 from conc_lessons.utils.base import (
     get_perftime,
@@ -40,7 +48,7 @@ if __name__ == "__main__":
         [
             threading.Thread(
                 target=run_simulated_io,
-                args=(f"Work {i}", 1, Ansi.rand_fg()),
+                args=(f"Work {i}", 1, Ansi.rand_fg(true_color=True)),
                 name=f"thread{i}",
             )
             for i in range(4, 16)
