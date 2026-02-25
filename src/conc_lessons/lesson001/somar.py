@@ -5,3 +5,5 @@ def soma(a,b):
     return a + b
 
 dis.dis(soma)
+
+print('oi')
