@@ -52,7 +52,7 @@ class MyThread(threading.Thread):
         return self._exception
 
     def _check_seconds(self) -> None:
-        max_seconds = 20
+        max_seconds = 10
         if self._seconds >= max_seconds:
             msg = f"Seconds must be less than or equal to {max_seconds}"
             raise ValueError(msg)
