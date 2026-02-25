@@ -1,5 +1,10 @@
 import threading
 import time
+import sys
+import os
+
+os.system('cls')
+sys.path.append('../..')
 
 from conc_lessons.utils.base import get_perftime
 from conc_lessons.utils.prints import Print

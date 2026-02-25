@@ -1,6 +1,12 @@
 import threading
 import time
 from typing import TYPE_CHECKING
+import multiprocessing
+import sys
+
+sys.path.append('../..')
+
+multiprocessing.Process()
 
 from conc_lessons.utils.ansi import Ansi
 from conc_lessons.utils.base import get_perftime, run_simulated_io
